@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade em grupo array</title>
+</head>
+
+<body>
+    <script>
+        let produtos = [];
+        let quantidades = [];
+        let produto = "";
+
+        do {
+            produto = prompt("Insira o produto").toUpperCase();
+            if (produto !== "FIM") {
+                produtos.push(produto);
+                let quantidade = prompt("Insira a quantidade");
+                quantidades.push(quantidade);
+            }
+        } while (produto !== "FIM")
+
+        document.write(`Produtos: `);
+
+        for (let p of produtos) {
+            document.write(`${p} `);
+        }
+
+        document.write(`<br/>`);
+        document.write(`Quantidades: `);
+
+        for (let q of quantidades) {
+            document.write(`${q} `);
+        }
+    </script>
+</body>
+
+</html>
